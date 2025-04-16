@@ -16,6 +16,10 @@ export class AccountModel {
     this.accounts = new Map();
   }
 
+  reset() {
+    this.accounts.clear();
+  }
+
   getBalance(accountId: string): number {
     const account = this.accounts.get(accountId);
 

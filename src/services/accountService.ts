@@ -4,6 +4,10 @@ import { CreatedEvent, EventType, Event } from "../types/account.ts";
 export class AccountService {
   constructor(private accountModel: AccountModel) {}
 
+  reset() {
+    this.accountModel.reset();
+  }
+
   getBalance(accountId: string): number {
     return this.accountModel.getBalance(accountId);
   }

@@ -16,4 +16,9 @@ export class AccountController {
     const result = this.accountService.createEvent(event);
     return c.json(result, 201);
   }
+
+  reset(c: Context) {
+    this.accountService.reset();
+    return c.newResponse("OK", 200);
+  }
 }
